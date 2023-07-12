@@ -11,6 +11,10 @@
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  .latest-articles {
+    background-color: hsl(0, 0%, 98%);
+    padding: 0 25px;
+  }
 }
 
 /* Small devices (landscape phones, less than 768px) */
