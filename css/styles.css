@@ -15,6 +15,16 @@
     background-color: hsl(0, 0%, 98%);
     padding: 0 25px;
   }
+  .article {
+    background-color: hsl(0, 0%, 100%);
+    padding-bottom: 45px;
+    border-radius: 10px;
+  }
+  .article-thumbnail {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
 }
 
 /* Small devices (landscape phones, less than 768px) */
