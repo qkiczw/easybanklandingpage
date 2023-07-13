@@ -1,0 +1,42 @@
+$bgc: rgb(243, 244, 246);
+$text-c: rgb(150, 152, 166);
+
+@mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+.bank__flex {
+    @include setFlex(column);
+    padding: 60px 20px;
+    text-align: center;
+    background-color: $bgc;
+
+    .title {
+        padding-bottom: 20px;
+    }
+
+    .text {
+        color: $text-c;
+        line-height: 150%;
+    }
+
+    .bank__about {
+        padding-bottom: 20px;
+
+        &__title {
+            font-size: 34px;
+
+        }
+    }
+
+    .bank__item {
+        padding-top: 40px;
+
+        &__icon {
+            padding-bottom: 20px;
+        }
+    }
+}
