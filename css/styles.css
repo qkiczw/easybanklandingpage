@@ -90,7 +90,7 @@
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   .latest-articles {
-    padding: 30px 100px;
+    padding: 30px 50px;
   }
 }
 
