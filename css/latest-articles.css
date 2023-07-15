@@ -1,10 +1,15 @@
 :root {
   --article-margin-gap: 15px;
+  --latest-articles-section-bg-color: hsl(0, 0%, 98%);
+  --single-article-bg-color: hsl(0, 0%, 100%);
+
+  /* fonts */
+  --font-color-light: hsl(233, 8%, 62%);
 }
 
 /* Main styles */
 .latest-articles {
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--latest-articles-section-bg-color);
   padding: 90px 160px;
 }
 .section-title {
@@ -20,7 +25,7 @@
 }
 .article {
   max-width: 255px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--single-article-bg-color);
   border-radius: 10px;
 }
 .article-thumbnail {
@@ -36,7 +41,7 @@
 }
 .article-author {
   font-size: 10px;
-  color: hsl(233, 8%, 62%);
+  color: var(--font-color-light);
   margin-bottom: var(--article-margin-gap);
 }
 .article-title {
@@ -45,7 +50,7 @@
   margin-bottom: var(--article-margin-gap);
 }
 .article-fragment {
-  color: hsl(233, 8%, 62%);
+  color: var(--font-color-light);
   font-size: 12.3px;
 }
 
