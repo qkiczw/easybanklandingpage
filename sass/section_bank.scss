@@ -1,0 +1,103 @@
+$bgc: rgb(243, 244, 246);
+$text-c: rgb(150, 152, 166);
+$breakpoint-md: 767.98px;
+$breakpoint-lg: 991.98px;
+$breakpoint-xl: 1199.98px;
+$breakpoint-xxl: 1399.98px;
+
+@mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
+    display: flex;
+    flex-direction: $flex-direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+.bg_color {
+    background-color: $bgc;
+}
+
+.bank__flex {
+    @include setFlex(column);
+    padding: 70px 20px;
+    text-align: center;
+
+
+    .title {
+        padding-bottom: 20px;
+    }
+
+    .text {
+        color: $text-c;
+        line-height: 150%;
+    }
+
+    .bank__about {
+        padding-bottom: 30px;
+
+        &__title {
+            font-size: 34px;
+        }
+    }
+
+    .bank__item {
+        padding-top: 40px;
+
+        &__icon {
+            padding-bottom: 20px;
+        }
+
+        &__title {
+            font-size: 22px;
+        }
+    }
+}
+
+@media(min-width:$breakpoint-md) {
+    .bank__flex {
+        @include setFlex(row, space-between);
+        flex-wrap: wrap;
+        padding: 90px 50px;
+        text-align: left;
+
+        .bank__about {
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        .bank__item {
+            width: 300px;
+        }
+    }
+}
+
+@media(min-width:$breakpoint-lg) {
+    .bank__flex {
+        .bank__item {
+            width: 400px;
+        }
+    }
+}
+
+@media (min-width:$breakpoint-xl) {
+    .bank__flex {
+        padding-left: 70px;
+        padding-right: 70px;
+
+        .bank__item {
+            width: 450px;
+        }
+    }
+}
+
+@media (min-width:$breakpoint-xxl) {
+    .container {
+        max-width: $breakpoint-xxl;
+        margin: 0 auto;
+    }
+
+    .bank__flex {
+        .bank__item {
+            width: 295px;
+        }
+    }
+}
