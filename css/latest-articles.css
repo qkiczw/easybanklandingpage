@@ -1,0 +1,113 @@
+:root {
+  --article-margin-gap: 15px;
+  --latest-articles-section-bg-color: hsl(0, 0%, 98%);
+  --single-article-bg-color: hsl(0, 0%, 100%);
+  --border-radius: 7px;
+
+  /* fonts */
+  --font-color-light: hsl(233, 8%, 62%);
+}
+
+/* Main styles */
+.section-latest-articles {
+  width: 100%;
+  background-color: var(--latest-articles-section-bg-color);
+  padding: 90px 25px 80px;
+}
+.section-title {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
+.articles-container {
+  max-width: 1399px;
+}
+.articles-container {
+  padding: 0 140px;
+  margin: 0 auto;
+}
+.articles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 255px);
+  gap: 25px 30px;
+  justify-content: space-between;
+}
+.article {
+  max-width: 255px;
+  background-color: var(--single-article-bg-color);
+  border-radius: var(--border-radius);
+}
+.article-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+.article-desc {
+  padding: 30px 25px 30px;
+  font-size: 12px;
+}
+.article-author {
+  font-size: 10px;
+  color: var(--font-color-light);
+  margin-bottom: var(--article-margin-gap);
+}
+.article-title {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: var(--article-margin-gap);
+}
+.article-fragment {
+  color: var(--font-color-light);
+  font-size: 12.3px;
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .section-title {
+    text-align: center;
+    font-size: 31px;
+    margin-bottom: 30px;
+  }
+
+  .articles {
+    grid-template-columns: repeat(auto-fill, 325px);
+    justify-content: center;
+  }
+  .article {
+    max-width: 325px;
+    padding-bottom: 16px;
+  }
+  .article-fragment {
+    font-size: 13px;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  .articles-container {
+    padding: 0;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  .section-latest-articles {
+    padding: 30px 100px;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  articles-container {
+    justify-content: space-around;
+  }
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+  .articles-container {
+    padding: 0;
+  }
+}
