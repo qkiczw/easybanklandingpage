@@ -1,6 +1,9 @@
 /* Font import */
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
 
+@import "./section_bank.css";
+
+
 * {
   font-family: "Public Sans", sans-serif;
   padding: 0;
