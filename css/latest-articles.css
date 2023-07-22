@@ -6,6 +6,10 @@
 
   /* fonts */
   --font-color-light: hsl(233, 8%, 62%);
+  --font-color-dark: #000;
+
+  /* links */
+  --link-hover-color: hsl(160, 65%, 50%);
 }
 
 /* Main styles */
@@ -55,6 +59,14 @@
   font-size: 16px;
   font-weight: 400;
   margin-bottom: var(--article-margin-gap);
+}
+.article-link {
+  color: var(--font-color-dark);
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+}
+.article-link:hover {
+  color: var(--link-hover-color);
 }
 .article-fragment {
   color: var(--font-color-light);
