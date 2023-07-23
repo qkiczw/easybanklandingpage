@@ -3,7 +3,6 @@
 
 @import 'footer.css';
 /* Font import */
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap%22");
 
 * {
   font-family: "Public Sans", sans-serif;
