@@ -5,6 +5,9 @@
 @import "./section_bank.css";
 
 
+@import 'footer.css';
+/* Font import */
+
 * {
   font-family: "Public Sans", sans-serif;
   padding: 0;
