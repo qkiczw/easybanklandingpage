@@ -62,7 +62,8 @@
   font-weight: 700;
   background: var(--gradient-primary);
   color: var(--very-light-gray);
-  /**/
+  transition: opacity .3s ease-in;
+    /**/
 }
 .header-img-back {
   z-index: 1;
@@ -83,6 +84,10 @@
   z-index: 2;
   height: 160vh;
   width: 200vh;
+}
+/*Active states */
+.header-hero-btn:hover {
+    opacity: .6;
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
