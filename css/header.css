@@ -31,7 +31,7 @@
 
 .header-main-container {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: .5fr auto;
 }
 .header-hero {
   display: flex;
@@ -44,11 +44,11 @@
   color: var(--dark-blue);
   font-size: 2rem;
   font-weight: 300;
-  min-width: 260px;
+  min-width: 200px;
 }
 .header-hero-content {
   font-size: 0.7rem;
-  min-width: 280px;
+  min-width: 200px;
   color: var(--grayish-blue);
   line-height: 1.1rem;
 }
@@ -65,33 +65,39 @@
   transition: opacity .3s ease-in;
     /**/
 }
+.header-img-section {
+  position:relative; 
+  right: 0;
+  padding:0;
+  height:200vh;
+  gap:0;
+}
 .header-img-back {
   z-index: 1;
   background-repeat: none;
   background-image: url("../images/bg-intro-desktop.svg");
   object-fit: cover;
   overflow: hidden;
-  width: 200vh;
-  height: 165vh;
-  transform: translate(1vw, -40vh) scale(0.75);
+  
 }
 .header-img-front {
-  background-image: url("../images/image-mockups.png");
+  background-image: url(../images/image-mockups.png);
   background-repeat: no-repeat;
   position: absolute;
+  right: 0;
+  transform: scale(.70) translate(25%, -20%);
   top: 0;
-  transform: scale(0.72) translate(45vh, -30vh);
   z-index: 2;
-  height: 160vh;
-  width: 200vh;
+  height: 100%;
+  width: 100%;
 }
 /*Active states */
 .header-hero-btn:hover {
     opacity: .6;
 }
-
 /* X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
+@media (max-width: 375px) {
+
 }
 
 /* Small devices (landscape phones, less than 768px) */
