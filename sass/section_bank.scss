@@ -16,30 +16,31 @@ $breakpoint-xxl: 1399.98px;
     background-color: $bgc;
 }
 
-.bank__flex {
+.about {
     @include setFlex(column);
     padding: 70px 20px;
     text-align: center;
 
-
     .title {
         padding-bottom: 20px;
+        font-weight: normal;
     }
 
     .text {
         color: $text-c;
         line-height: 150%;
+        font-size: 15px;
     }
 
-    .bank__about {
+    &__choose {
         padding-bottom: 30px;
-
-        &__title {
-            font-size: 34px;
-        }
     }
 
-    .bank__item {
+    &__title {
+        font-size: 34px;
+    }
+
+    &-item {
         padding-top: 40px;
 
         &__icon {
@@ -53,51 +54,43 @@ $breakpoint-xxl: 1399.98px;
 }
 
 @media(min-width:$breakpoint-md) {
-    .bank__flex {
+    .about {
         @include setFlex(row, space-between);
         flex-wrap: wrap;
         padding: 90px 50px;
         text-align: left;
 
-        .bank__about {
+        &__choose {
             flex-grow: 1;
             width: 100%;
         }
 
-        .bank__item {
+        &-item {
             width: 300px;
         }
     }
 }
 
 @media(min-width:$breakpoint-lg) {
-    .bank__flex {
-        .bank__item {
+    .about {
+        &-item {
             width: 400px;
         }
     }
 }
 
 @media (min-width:$breakpoint-xl) {
-    .bank__flex {
-        padding-left: 70px;
-        padding-right: 70px;
-
-        .bank__item {
-            width: 450px;
-        }
-    }
-}
-
-@media (min-width:$breakpoint-xxl) {
     .container {
-        max-width: $breakpoint-xxl;
+        max-width: 1100px;
         margin: 0 auto;
     }
 
-    .bank__flex {
-        .bank__item {
-            width: 295px;
+    .about {
+        padding-left: 0;
+        padding-right: 0;
+
+        &-item {
+            width: 245px;
         }
     }
 }
