@@ -21,19 +21,19 @@ $breakpoint-xxl: 1399.98px;
     padding: 70px 20px;
     text-align: center;
 
-
     .title {
         padding-bottom: 20px;
+        font-weight: normal;
     }
 
     .text {
         color: $text-c;
         line-height: 150%;
+        font-size: 15px;
     }
 
     &__choose {
         padding-bottom: 30px;
-
     }
 
     &__title {
@@ -80,25 +80,17 @@ $breakpoint-xxl: 1399.98px;
 }
 
 @media (min-width:$breakpoint-xl) {
-    .about {
-        padding-left: 70px;
-        padding-right: 70px;
-
-        &-item {
-            width: 450px;
-        }
-    }
-}
-
-@media (min-width:$breakpoint-xxl) {
     .container {
-        max-width: $breakpoint-xxl;
+        max-width: 1100px;
         margin: 0 auto;
     }
 
     .about {
+        padding-left: 0;
+        padding-right: 0;
+
         &-item {
-            width: 295px;
+            width: 245px;
         }
     }
 }
