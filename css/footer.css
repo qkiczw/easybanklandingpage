@@ -9,7 +9,7 @@
 
 footer {
   background-color: var(--footer-background);
-  padding: 0 25px;
+  padding: 0 25px 40px;
 }
 
 .footer-container {
@@ -67,6 +67,23 @@ footer {
 .footer-menu-item > a:hover {
   color: var(--link-hover-color);
   transition-duration: 0.25s;
+}
+.link-request-invite {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 50px;
+  background: rgb(49, 209, 103);
+  background: linear-gradient(
+    90deg,
+    rgba(49, 209, 103, 1) 30%,
+    rgba(47, 182, 214, 1) 80%
+  );
+  text-decoration: none;
+  padding: 15px 30px;
+}
+.link-request-invite:hover {
+  filter: grayscale(40%) brightness(1.2);
 }
 
 /* Large devices (desktops, less than 1200px) */
