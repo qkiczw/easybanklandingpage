@@ -85,6 +85,9 @@ footer {
 .link-request-invite:hover {
   filter: grayscale(40%) brightness(1.2);
 }
+.footer-rights {
+  font-size: 14px;
+}
 
 /* Large devices (desktops, less than 1200px) */
 @media (min-width: 1024px) {
