@@ -1,16 +1,4 @@
-$bgc: rgb(243, 244, 246);
-$text-c: rgb(150, 152, 166);
-$breakpoint-md: 767.98px;
-$breakpoint-lg: 991.98px;
-$breakpoint-xl: 1199.98px;
-$breakpoint-xxl: 1399.98px;
-
-@mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}
+@use'./consts'as const;
 
 .bg_color {
     background-color: $bgc;

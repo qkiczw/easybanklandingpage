@@ -1,0 +1,51 @@
+@use'./consts'as const;
+
+// color: const.$text-c;
+.nav {
+    // display: const.$setFlex;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+
+    background-color: #fff;
+    z-index: 1;
+
+    &__closebar {
+        display: none;
+    }
+
+    &__list {
+        position: absolute;
+        top: 90px;
+        left: 5%;
+        width: 90%;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #fff;
+    }
+
+    &__link {
+        color: black;
+        text-decoration: none;
+    }
+
+    &__btn {
+        display: none;
+    }
+
+    &__active {
+        display: block;
+    }
+
+    .shadow-bg {
+        box-shadow: 2px 3px 4px 10px black;
+    }
+}
