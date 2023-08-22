@@ -1,23 +1,12 @@
-$bgc: rgb(243, 244, 246);
-$text-c: rgb(150, 152, 166);
-$breakpoint-md: 767.98px;
-$breakpoint-lg: 991.98px;
-$breakpoint-xl: 1199.98px;
-$breakpoint-xxl: 1399.98px;
-
-@mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}
+@use'./consts'as const;
+@use'./mixin';
 
 .bg_color {
-    background-color: $bgc;
+    background-color: const.$bgc;
 }
 
 .about {
-    @include setFlex(column);
+    @include mixin.setFlex(column);
     padding: 70px 20px;
     text-align: center;
 
@@ -27,7 +16,7 @@ $breakpoint-xxl: 1399.98px;
     }
 
     .text {
-        color: $text-c;
+        color: const.$text-c;
         line-height: 150%;
         font-size: 15px;
     }
@@ -53,9 +42,9 @@ $breakpoint-xxl: 1399.98px;
     }
 }
 
-@media(min-width:$breakpoint-md) {
+@media(min-width:const.$breakpoint-md) {
     .about {
-        @include setFlex(row, space-between);
+        @include mixin.setFlex(row, space-between);
         flex-wrap: wrap;
         padding: 90px 50px;
         text-align: left;
@@ -71,7 +60,7 @@ $breakpoint-xxl: 1399.98px;
     }
 }
 
-@media(min-width:$breakpoint-lg) {
+@media(min-width:const.$breakpoint-lg) {
     .about {
         &-item {
             width: 400px;
@@ -79,7 +68,7 @@ $breakpoint-xxl: 1399.98px;
     }
 }
 
-@media (min-width:$breakpoint-xl) {
+@media (min-width:const.$breakpoint-xl) {
     .container {
         max-width: 1100px;
         margin: 0 auto;
