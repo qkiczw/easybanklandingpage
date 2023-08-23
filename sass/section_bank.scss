@@ -1,11 +1,12 @@
 @use'./consts'as const;
+@use'./mixin';
 
 .bg_color {
-    background-color: $bgc;
+    background-color: const.$bgc;
 }
 
 .about {
-    @include setFlex(column);
+    @include mixin.setFlex(column);
     padding: 70px 20px;
     text-align: center;
 
@@ -15,7 +16,7 @@
     }
 
     .text {
-        color: $text-c;
+        color: const.$text-c;
         line-height: 150%;
         font-size: 15px;
     }
@@ -41,9 +42,9 @@
     }
 }
 
-@media(min-width:$breakpoint-md) {
+@media(min-width:const.$breakpoint-md) {
     .about {
-        @include setFlex(row, space-between);
+        @include mixin.setFlex(row, space-between);
         flex-wrap: wrap;
         padding: 90px 50px;
         text-align: left;
@@ -59,7 +60,7 @@
     }
 }
 
-@media(min-width:$breakpoint-lg) {
+@media(min-width:const.$breakpoint-lg) {
     .about {
         &-item {
             width: 400px;
@@ -67,7 +68,7 @@
     }
 }
 
-@media (min-width:$breakpoint-xl) {
+@media (min-width:const.$breakpoint-xl) {
     .container {
         max-width: 1100px;
         margin: 0 auto;
