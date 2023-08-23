@@ -11,7 +11,4 @@ Info about the project.
 ## Team:
 
 - Qki_czw: [link](https://www.github.com/qkiczw)
-- Wilkubone:
-- Jelena:
-- Szelebele:
-- Skarmor:
+- Jelena: [link](https://github.com/Jelena-ag)
