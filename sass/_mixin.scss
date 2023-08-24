@@ -4,3 +4,22 @@
     justify-content: $justify-content;
     align-items: $align-items;
 }
+
+@mixin Btn {
+    display: block;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 15px 30px;
+    transition-duration: 0.25s;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(90deg,
+            rgba(49, 209, 103, 1) 30%,
+            rgba(47, 182, 214, 1) 80%);
+    cursor: pointer;
+}
+
+@mixin BtnHover {
+    filter: grayscale(40%) brightness(1.2);
+}

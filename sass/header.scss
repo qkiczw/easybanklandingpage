@@ -1,0 +1,29 @@
+@use'./consts'as const;
+@use'./mixin';
+
+
+
+
+
+header {
+    &__container {
+        @include mixin.setFlex(row, space-between);
+    }
+
+    &__title {
+        font-size: 30px;
+    }
+
+
+
+    &__btn {
+        @include mixin.Btn;
+
+        padding: 50px;
+        background-color: yellowgreen;
+
+        &:hover {
+            @include mixin.BtnHover;
+        }
+    }
+}
