@@ -4,10 +4,13 @@
 .nav {
     position: sticky;
     top: 0;
-    @include mixin.setFlex(row, space-between);
-    padding: 20px 30px;
     background-color: #fff;
     z-index: 1;
+
+    &__container {
+        @include mixin.setFlex(row, space-between);
+        padding: 20px 30px;
+    }
 
     &__closebar {
         display: none;
@@ -42,4 +45,78 @@
     // .shadow-bg {
     //     box-shadow: 2px 3px 4px 10px black;
     // }
+}
+
+@media (min-width:const.$breakpoint-xl) {
+    .nav {
+        &__container {
+            max-width: 1110px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        &__bar {
+            display: none;
+        }
+
+        &__list {
+            position: static;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include mixin.setFlex(row, space-between);
+            // padding: 10px;
+            border-radius: none;
+        }
+
+        &__link {
+            position: relative;
+            padding: 0;
+            margin: 0 15px;
+            color: const.$text-c;
+            transition: transform 0.3s;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50px;
+                left: 0;
+                height: 4px;
+                width: 100%;
+                background: linear-gradient(90deg,
+                        rgba(49, 209, 103, 1) 30%,
+                        rgba(47, 182, 214, 1) 80%);
+                transform: scaleX(0);
+                transition: transform 0.3s;
+            }
+
+            &:hover {
+                color: black;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+            }
+        }
+
+        &__btn {
+            display: block;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 15px 30px;
+            transition-duration: 0.25s;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(90deg,
+                    rgba(49, 209, 103, 1) 30%,
+                    rgba(47, 182, 214, 1) 80%);
+            cursor: pointer;
+
+            &:hover {
+                filter: grayscale(40%) brightness(1.2);
+            }
+        }
+    }
 }
