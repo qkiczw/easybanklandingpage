@@ -1,27 +1,44 @@
 @use'./consts'as const;
 @use'./mixin';
 
-
-
-
-
-header {
+.header {
     &__container {
-        @include mixin.setFlex(row, space-between);
+        @include mixin.setFlex(row);
+    }
+
+    &__about {
+        @include mixin.setFlex(column);
+        padding: 30px 30px 50px 30px;
     }
 
     &__title {
-        font-size: 30px;
+        padding-bottom: 30px;
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    &__text {
+        color: const.$text-c;
+        line-height: 150%;
     }
 
     &__btn {
         @include mixin.Btn;
-
-        padding: 50px;
-        background-color: yellowgreen;
+        margin: 30px auto;
 
         &:hover {
             @include mixin.BtnHover;
+        }
+    }
+}
+
+@media (min-width:const.$breakpoint-xl) {
+    .header {
+        &__container {
+            // @include mixin.setFlex(column, space-between);
+            max-width: 1110px;
+            margin: 0 auto;
+
         }
     }
 }
