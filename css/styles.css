@@ -3,6 +3,8 @@
 @import url("./latest-articles.css");
 @import url("./footer.css");
 @import "./section_bank.css";
+@import "./navigation.css";
+@import "./header.css";
 
 * {
   font-family: "Public Sans", sans-serif;
