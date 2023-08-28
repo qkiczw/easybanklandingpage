@@ -51,7 +51,7 @@
     }
 }
 
-@media (min-width:const.$breakpoint-xl) {
+@media (min-width:const.$breakpoint-lg) {
     .nav {
         &__container {
             max-width: 1110px;
