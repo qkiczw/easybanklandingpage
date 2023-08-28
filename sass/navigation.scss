@@ -16,17 +16,29 @@
         display: none;
     }
 
+    &__show {
+        display: block;
+    }
+
+    &__close {
+        display: none;
+    }
+
     &__list {
+        display: none;
+    }
+
+    &__active {
         position: absolute;
-        top: 90px;
+        top: 80px;
         left: 5%;
         width: 90%;
-        height: 250px;
+        height: 280px;
         @include mixin.setFlex(column, space-around);
-        display: none;
         padding: 10px;
         border-radius: 5px;
         background-color: #fff;
+        box-shadow: 0 70px 150px 80px rgb(49, 49, 76, .7);
     }
 
     &__link {
@@ -37,17 +49,9 @@
     &__btn {
         display: none;
     }
-
-    &__show {
-        display: block;
-    }
-
-    // .shadow-bg {
-    //     box-shadow: 2px 3px 4px 10px black;
-    // }
 }
 
-@media (min-width:const.$breakpoint-xl) {
+@media (min-width:const.$breakpoint-lg) {
     .nav {
         &__container {
             max-width: 1110px;

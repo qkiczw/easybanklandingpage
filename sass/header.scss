@@ -10,7 +10,7 @@
 
     &__about {
         @include mixin.setFlex(column);
-        margin-top: -100px;
+        margin-top: -70px;
         padding: 0 28px 50px 28px;
         order: 1;
     }
@@ -100,7 +100,7 @@
 
             &--img {
                 top: -10px;
-                left: 1100px;
+                left: 880px;
                 width: 600px;
             }
         }
