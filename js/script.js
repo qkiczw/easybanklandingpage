@@ -5,21 +5,19 @@ AOS.init({
 	once: true,
 });
 
+// navigation - menu bar
+const openMenuButton = document.querySelector('.nav__bar');
+const closeMenuButton = document.querySelector('.nav__closebar');
+const menuElement = document.querySelector('.nav__list');
 
-const Btn = document.querySelector('.nav__bar');
-const closeBtn = document.querySelector('.nav__closebar');
-const navList = document.querySelector('.nav__list');
+openMenuButton.addEventListener('click', () => {
+	menuElement.classList.add('nav__active');
+	openMenuButton.classList.add('nav__close');
+	closeMenuButton.classList.add('nav__show');
+});
 
-function showMenu() {
-	navList.classList.toggle('nav__show');
-	if (navList.classList.contains('nav__show')) {
-        Btn.style.display = 'none';
-        closeBtn.style.display = 'block';
-    }
-    else {
-        closeBtn.style.display = 'none';
-         Btn.style.display = 'block';
-	}
-}
-
-Btn.addEventListener('click', showMenu);
+closeMenuButton.addEventListener('click', () => {
+	menuElement.classList.remove('nav__active');
+	openMenuButton.classList.remove('nav__close');
+	closeMenuButton.classList.remove('nav__show');
+});
