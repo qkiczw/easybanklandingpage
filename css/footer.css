@@ -45,13 +45,13 @@ footer {
 .icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 13px;
   list-style: none;
   padding-top: 30px;
 }
-.icon-background:hover {
+.icon:hover .icon-background {
   fill: var(--link-hover-color);
-  cursor: pointer;
   transition-duration: 0.25s;
 }
 
