@@ -60,11 +60,13 @@
         &__container {
             @include mixin.container;
             flex-direction: row;
+            overflow-x: clip;
         }
 
         &__about {
             align-items: flex-start;
-            padding-right: 240px;
+            margin-top: 0;
+            padding: 0;
             order: 0;
         }
 
@@ -73,17 +75,25 @@
             text-align: left;
         }
 
+        &__text {
+            padding-right: 70px;
+        }
+
+        &__btn {
+            margin-bottom: 0;
+        }
+
         &__mockup {
             top: 0;
-            left: -70px;
-            background-size: 200%;
-            background-position: -10px -200px;
+            left: 0;
+            height: 550px;
+            background-position: 0 -270px;
             background-image: url(../images/bg-intro-desktop.svg);
 
             &__img {
-                top: -90px;
-                left: 0;
-                width: 130%;
+                top: -85px;
+                left: 110px;
+                width: 650px;
             }
         }
     }
