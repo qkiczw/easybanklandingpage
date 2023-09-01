@@ -52,6 +52,10 @@
             height: auto;
             object-fit: cover;
         }
+
+        &__img--opacity {
+            opacity: 0;
+        }
     }
 }
 
@@ -106,7 +110,7 @@
             top: 0;
             left: 0;
             height: 550px;
-            background-position: -50px -250px;
+            background-position: -70px -260px;
             background-image: url(../images/bg-intro-desktop.svg);
 
             &__img {

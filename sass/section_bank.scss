@@ -46,7 +46,7 @@
     .about {
         @include mixin.setFlex(row, space-between);
         flex-wrap: wrap;
-        padding: 90px 50px;
+        padding: 90px 25px;
         text-align: left;
 
         &__choose {
