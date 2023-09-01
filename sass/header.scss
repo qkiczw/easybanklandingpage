@@ -2,43 +2,126 @@
 @use'./mixin';
 
 .header {
+    background-color: rgb(250, 250, 250);
+
     &__container {
-        @include mixin.setFlex(row);
+        @include mixin.setFlex(column);
     }
 
     &__about {
         @include mixin.setFlex(column);
-        padding: 30px 30px 50px 30px;
+        gap: 30px;
+        margin-top: -90px;
+        padding: 0 28px;
+        order: 1;
     }
 
     &__title {
-        padding-bottom: 30px;
         font-size: 40px;
         font-weight: 300;
+        text-align: center;
     }
 
     &__text {
+        font-size: 15px;
         color: const.$text-c;
         line-height: 150%;
     }
 
     &__btn {
-        @include mixin.Btn;
-        margin: 30px auto;
+        @include mixin.requestBtn;
+        margin-bottom: 100px;
 
         &:hover {
             @include mixin.BtnHover;
+        }
+    }
+
+    &__mockup {
+        position: relative;
+        top: -62px;
+        width: 100%;
+        background-image: url(../images/bg-intro-mobile.svg);
+        background-repeat: no-repeat;
+
+        &__img {
+            position: relative;
+            top: -62px;
+            left: calc(50% - 350px/2);
+            width: 350px;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
+
+@media(min-width:const.$breakpoint-md) {
+    .header {
+
+        &__title {
+            display: block;
+        }
+
+        &__mockup {
+            background-position: 390px 50px;
+
+            &__img {
+                top: -30px;
+                left: 350px;
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media (min-width:const.$breakpoint-lg) {
+    .header {
+        &__container {
+            @include mixin.container;
+            flex-direction: row;
+            overflow-x: clip;
+        }
+
+        &__about {
+            align-items: flex-start;
+            margin-top: 0;
+            padding-left: 25px;
+            order: 0;
+        }
+
+        &__title {
+            font-size: 45px;
+            text-align: left;
+        }
+
+        &__text {
+            padding-right: 90px;
+        }
+
+        &__btn {
+            margin-bottom: 0;
+        }
+
+        &__mockup {
+            top: 0;
+            left: 0;
+            height: 550px;
+            background-position: -50px -250px;
+            background-image: url(../images/bg-intro-desktop.svg);
+
+            &__img {
+                top: -85px;
+                left: 110px;
+                width: 630px;
+            }
         }
     }
 }
 
 @media (min-width:const.$breakpoint-xl) {
     .header {
-        &__container {
-            // @include mixin.setFlex(column, space-between);
-            max-width: 1110px;
-            margin: 0 auto;
-
+        &__about {
+            padding: 0;
         }
     }
 }

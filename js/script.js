@@ -5,7 +5,7 @@ AOS.init({
 	once: true,
 });
 
-// / navigation - menu bar
+// navigation - menu bar
 const openMenuButton = document.querySelector('.nav__bar');
 const closeMenuButton = document.querySelector('.nav__closebar');
 const menuElement = document.querySelector('.nav__list');
