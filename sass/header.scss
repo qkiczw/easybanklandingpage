@@ -11,7 +11,7 @@
     &__about {
         @include mixin.setFlex(column);
         gap: 30px;
-        margin-top: -80px;
+        margin-top: -90px;
         padding: 0 28px;
         order: 1;
     }
@@ -55,6 +55,25 @@
     }
 }
 
+@media(min-width:const.$breakpoint-md) {
+    .header {
+
+        &__title {
+            display: block;
+        }
+
+        &__mockup {
+            background-position: 390px 50px;
+
+            &__img {
+                top: -30px;
+                left: 350px;
+                width: 400px;
+            }
+        }
+    }
+}
+
 @media (min-width:const.$breakpoint-lg) {
     .header {
         &__container {
@@ -66,7 +85,7 @@
         &__about {
             align-items: flex-start;
             margin-top: 0;
-            padding: 0;
+            padding-left: 25px;
             order: 0;
         }
 
@@ -76,7 +95,7 @@
         }
 
         &__text {
-            padding-right: 70px;
+            padding-right: 90px;
         }
 
         &__btn {
@@ -87,14 +106,22 @@
             top: 0;
             left: 0;
             height: 550px;
-            background-position: 0 -270px;
+            background-position: -50px -250px;
             background-image: url(../images/bg-intro-desktop.svg);
 
             &__img {
                 top: -85px;
                 left: 110px;
-                width: 650px;
+                width: 630px;
             }
+        }
+    }
+}
+
+@media (min-width:const.$breakpoint-xl) {
+    .header {
+        &__about {
+            padding: 0;
         }
     }
 }
