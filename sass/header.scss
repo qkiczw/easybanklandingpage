@@ -11,9 +11,8 @@
     &__about {
         @include mixin.setFlex(column);
         gap: 30px;
-        margin-top: -90px;
-        padding: 0 28px;
         order: 1;
+        padding: 20px 28px 100px;
     }
 
     &__title {
@@ -25,12 +24,12 @@
     &__text {
         font-size: 15px;
         color: const.$text-c;
+        text-align: center;
         line-height: 150%;
     }
 
     &__btn {
         @include mixin.requestBtn;
-        margin-bottom: 100px;
 
         &:hover {
             @include mixin.BtnHover;
@@ -38,18 +37,19 @@
     }
 
     &__mockup {
-        position: relative;
-        top: -62px;
+        order: 0;
         width: 100%;
         background-image: url(../images/bg-intro-mobile.svg);
+        background-position: 0 52%;
         background-repeat: no-repeat;
+        background-size: 100%;
+        overflow-x: clip;
 
         &__img {
-            position: relative;
-            top: -62px;
-            left: calc(50% - 350px/2);
             width: 350px;
             height: auto;
+            margin-left: calc(50% - 350px/2);
+            margin-top: -120px;
             object-fit: cover;
         }
 
@@ -61,18 +61,17 @@
 
 @media(min-width:const.$breakpoint-md) {
     .header {
-
         &__title {
             display: block;
         }
 
         &__mockup {
-            background-position: 390px 50px;
+            height: 400px;
+            background-position: 30% 62%;
 
             &__img {
-                top: -30px;
-                left: 350px;
-                width: 400px;
+                width: 500px;
+                margin-left: calc(74% - 350px/2);
             }
         }
     }
@@ -81,9 +80,7 @@
 @media (min-width:const.$breakpoint-lg) {
     .header {
         &__container {
-            @include mixin.container;
             flex-direction: row;
-            overflow-x: clip;
         }
 
         &__about {
@@ -99,7 +96,8 @@
         }
 
         &__text {
-            padding-right: 90px;
+            padding-right: 60px;
+            text-align: left;
         }
 
         &__btn {
@@ -107,16 +105,16 @@
         }
 
         &__mockup {
-            top: 0;
-            left: 0;
-            height: 550px;
-            background-position: -70px -260px;
+            flex-basis: 140%;
+            height: 450px;
             background-image: url(../images/bg-intro-desktop.svg);
+            background-position: 25% 75%;
+            background-size: 125% 140%;
 
             &__img {
-                top: -85px;
-                left: 110px;
-                width: 630px;
+                width: 600px;
+                margin-top: -90px;
+                margin-left: calc(48% - 350px/2);
             }
         }
     }
@@ -125,7 +123,30 @@
 @media (min-width:const.$breakpoint-xl) {
     .header {
         &__about {
-            padding: 0;
+            padding-left: 140px;
+        }
+
+        &__mockup {
+            height: 540px;
+            background-position: 0% 80%;
+
+            &__img {
+                margin-top: -85px;
+                margin-left: calc(58% - 350px/2);
+            }
+        }
+    }
+}
+
+@media (min-width:const.$breakpoint-xxl) {
+    .header {
+        &__about {
+            padding-left: 170px;
+        }
+
+        &__container {
+            max-width: 1440px;
+            margin: 0 auto;
         }
     }
 }
