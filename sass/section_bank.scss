@@ -1,45 +1,35 @@
-$bgc: rgb(243, 244, 246);
-$text-c: rgb(150, 152, 166);
-$breakpoint-md: 767.98px;
-$breakpoint-lg: 991.98px;
-$breakpoint-xl: 1199.98px;
-$breakpoint-xxl: 1399.98px;
-
-@mixin setFlex($flex-direction, $justify-content: center, $align-items: center) {
-    display: flex;
-    flex-direction: $flex-direction;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}
+@use'./consts'as const;
+@use'./mixin';
 
 .bg_color {
-    background-color: $bgc;
+    background-color: const.$bgc;
 }
 
-.bank__flex {
-    @include setFlex(column);
+.about {
+    @include mixin.setFlex(column);
     padding: 70px 20px;
     text-align: center;
 
-
     .title {
         padding-bottom: 20px;
+        font-weight: normal;
     }
 
     .text {
-        color: $text-c;
+        color: const.$text-c;
         line-height: 150%;
+        font-size: 15px;
     }
 
-    .bank__about {
+    &__choose {
         padding-bottom: 30px;
-
-        &__title {
-            font-size: 34px;
-        }
     }
 
-    .bank__item {
+    &__title {
+        font-size: 34px;
+    }
+
+    &-item {
         padding-top: 40px;
 
         &__icon {
@@ -52,52 +42,43 @@ $breakpoint-xxl: 1399.98px;
     }
 }
 
-@media(min-width:$breakpoint-md) {
-    .bank__flex {
-        @include setFlex(row, space-between);
+@media(min-width:const.$breakpoint-md) {
+    .about {
+        @include mixin.setFlex(row, space-between);
         flex-wrap: wrap;
-        padding: 90px 50px;
+        padding: 90px 25px;
         text-align: left;
 
-        .bank__about {
+        &__choose {
             flex-grow: 1;
             width: 100%;
         }
 
-        .bank__item {
+        &-item {
             width: 300px;
         }
     }
 }
 
-@media(min-width:$breakpoint-lg) {
-    .bank__flex {
-        .bank__item {
+@media(min-width:const.$breakpoint-lg) {
+    .about {
+        &-item {
             width: 400px;
         }
     }
 }
 
-@media (min-width:$breakpoint-xl) {
-    .bank__flex {
-        padding-left: 70px;
-        padding-right: 70px;
-
-        .bank__item {
-            width: 450px;
-        }
-    }
-}
-
-@media (min-width:$breakpoint-xxl) {
+@media (min-width:const.$breakpoint-xl) {
     .container {
-        max-width: $breakpoint-xxl;
-        margin: 0 auto;
+        @include mixin.container;
     }
 
-    .bank__flex {
-        .bank__item {
-            width: 295px;
+    .about {
+        padding-left: 0;
+        padding-right: 0;
+
+        &-item {
+            width: 245px;
         }
     }
 }

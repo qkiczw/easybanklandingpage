@@ -1,0 +1,151 @@
+@use'./consts'as const;
+@use'./mixin';
+
+.header {
+    background-color: rgb(250, 250, 250);
+
+    &__container {
+        @include mixin.setFlex(column);
+    }
+
+    &__about {
+        @include mixin.setFlex(column);
+        gap: 30px;
+        order: 1;
+        padding: 20px 28px 100px;
+    }
+
+    &__title {
+        font-size: 40px;
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 15px;
+        color: const.$text-c;
+        text-align: center;
+        line-height: 150%;
+    }
+
+    &__btn {
+        @include mixin.requestBtn;
+
+        &:hover {
+            @include mixin.BtnHover;
+        }
+    }
+
+    &__mockup {
+        order: 0;
+        width: 100%;
+        background-image: url(../images/bg-intro-mobile.svg);
+        background-position: 0 62%;
+        background-repeat: no-repeat;
+        background-size: 120%;
+        overflow-x: clip;
+
+        &__img {
+            width: 350px;
+            height: auto;
+            margin-left: calc(50% - 350px/2);
+            margin-top: -120px;
+            object-fit: cover;
+        }
+
+        &__img--opacity {
+            opacity: 0;
+        }
+    }
+}
+
+@media(min-width:const.$breakpoint-md) {
+    .header {
+        &__title {
+            display: block;
+        }
+
+        &__mockup {
+            height: 400px;
+            background-position: 30% 62%;
+
+            &__img {
+                width: 500px;
+                margin-left: calc(74% - 350px/2);
+            }
+        }
+    }
+}
+
+@media (min-width:const.$breakpoint-lg) {
+    .header {
+        &__container {
+            flex-direction: row;
+        }
+
+        &__about {
+            align-items: flex-start;
+            margin-top: 0;
+            padding-left: 25px;
+            order: 0;
+        }
+
+        &__title {
+            font-size: 45px;
+            text-align: left;
+        }
+
+        &__text {
+            padding-right: 60px;
+            text-align: left;
+        }
+
+        &__btn {
+            margin-bottom: 0;
+        }
+
+        &__mockup {
+            flex-basis: 140%;
+            height: 450px;
+            background-image: url(../images/bg-intro-desktop.svg);
+            background-position: 25% 75%;
+
+            &__img {
+                width: 600px;
+                margin-top: -90px;
+                margin-left: calc(48% - 350px/2);
+            }
+        }
+    }
+}
+
+@media (min-width:const.$breakpoint-xl) {
+    .header {
+        &__about {
+            padding-left: 140px;
+        }
+
+        &__mockup {
+            height: 540px;
+            background-position: -85% 75%;
+
+             &__img {
+                margin-top: -85px;
+                margin-left: calc(58% - 350px/2);
+            }
+        }
+    }
+}
+
+@media (min-width:const.$breakpoint-xxl) {
+    .header {
+        &__about {
+            padding-left: 170px;
+        }
+
+        &__container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+    }
+}
