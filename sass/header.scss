@@ -40,9 +40,9 @@
         order: 0;
         width: 100%;
         background-image: url(../images/bg-intro-mobile.svg);
-        background-position: 0 52%;
+        background-position: 0 62%;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 120%;
         overflow-x: clip;
 
         &__img {
@@ -109,7 +109,6 @@
             height: 450px;
             background-image: url(../images/bg-intro-desktop.svg);
             background-position: 25% 75%;
-            background-size: 125% 140%;
 
             &__img {
                 width: 600px;
@@ -128,9 +127,9 @@
 
         &__mockup {
             height: 540px;
-            background-position: 0% 80%;
+            background-position: -85% 75%;
 
-            &__img {
+             &__img {
                 margin-top: -85px;
                 margin-left: calc(58% - 350px/2);
             }
